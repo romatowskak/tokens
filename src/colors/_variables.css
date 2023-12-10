@@ -1,0 +1,22 @@
+/**
+ * Do not edit directly
+ * Generated on Sun, 10 Dec 2023 10:45:16 GMT
+ */
+
+:root {
+  --light-text-color: #2d2f30;
+  --light-background-color: #ffffff;
+  --light-input-border-color: #e3e1e1;
+  --light-button-background-color: #414344;
+  --light-button-text-color: #ffffff;
+  --light-icon-color: #2d2f30;
+  --light-default-border-radius: 10px;
+
+  --dark-text-color: #fbfafa;
+  --dark-background-color: #2d2f30;
+  --dark-input-border-color: #ffffff;
+  --dark-button-background-color: #ffffff;
+  --dark-button-text-color: #2d2f30;
+  --dark-icon-color: #ffffff;
+  --dark-default-border-radius: 10;
+}

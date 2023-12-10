@@ -1,0 +1,48 @@
+<div class="figma-tokens">
+  <button mat-raised-button class="toggle-theme-button" (click)="toggleTheme()">
+    Switch to {{ theme === "light" ? "dark" : "light" }} theme
+  </button>
+
+  <div class="login__wrapper">
+    <div class="login__header">
+      <div>Login account</div>
+      <div class="login__icons">
+        <mat-icon
+          svgIcon="facebook"
+          aria-hidden="false"
+          aria-label="facebook icon"
+          class="social-icon"
+        ></mat-icon>
+        <mat-icon
+          svgIcon="twitter"
+          aria-hidden="false"
+          aria-label="twitter icon"
+          class="social-icon"
+        ></mat-icon>
+        <mat-icon
+          svgIcon="google"
+          aria-hidden="false"
+          aria-label="google icon"
+          class="social-icon"
+        ></mat-icon>
+      </div>
+    </div>
+
+    <div>Or login using email & password</div>
+
+    <div class="inputs__container">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </div>
+
+    <button class="login__button" mat-raised-button>Login</button>
+  </div>
+</div>
+<router-outlet></router-outlet>

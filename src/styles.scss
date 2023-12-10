@@ -1,0 +1,72 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$figma-tokens-primary: mat.define-palette(mat.$indigo-palette);
+$figma-tokens-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$figma-tokens-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$figma-tokens-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $figma-tokens-primary,
+      accent: $figma-tokens-accent,
+      warn: $figma-tokens-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($figma-tokens-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+// tokens
+@import "colors/_variables";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// theming
+
+body.light {
+  --text-color: var(--light-text-color);
+  --background-color: var(--light-background-color);
+  --input-border-color: var(--light-input-border-color);
+  --button-background-color: var(--light-button-background-color);
+  --button-text-color: var(--light-button-text-color);
+  --icon-color: var(--light-icon-color);
+  --border-radius: var(--light-default-border-radius);
+}
+
+body.dark {
+  --text-color: var(--dark-text-color);
+  --background-color: var(--dark-background-color);
+  --input-border-color: var(--dark-input-border-color);
+  --button-background-color: var(--dark-button-background-color);
+  --button-text-color: var(--dark-button-text-color);
+  --icon-color: var(--dark-icon-color);
+  --border-radius: var(--dark-default-border-radius);
+}
